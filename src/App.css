@@ -1,38 +1,190 @@
-.App {
+input,textarea {
+  padding: 10px;
+  border: none;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+input,textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input::placeholder {
+  color: #ccc
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+select option {
+  color: #333;
+  background-color: #fff;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.input_div {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: white;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input_checkbox {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add_button {
+  background-color: #007bff;
+  color: white;
+  width: auto;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add_button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.error_msg {
+  color: red;
+  font-size: 0.875em;
+}
+
+.show_field {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.edit_button {
+  background-color: #007bff;
+  color: white;
+  width: auto;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.delete_button {
+  background-color: #da9d9b;
+  color: white;
+  width: auto;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.show_button {
+  display: flex;
+  gap: 5px;
+}
+
+.form-generate {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.aling-self-end {
+  align-self: flex-end;
+}
+
+.show_forms {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+}
+
+.form_field {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.test_button {
+  background-color: #007bff;
   color: white;
+  width: auto;
+  border: none;
+  padding: 5px 5px;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.mid_grid {
+  border-left:  1px solid #ccc;
+  border-right:  1px solid #ccc;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.closebutton{
+  display: flex;
+  justify-content: end;
 }
